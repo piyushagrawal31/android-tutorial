@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.pstech.tutorials">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -41,32 +44,26 @@
             android:name=".Main2Activity"
             android:label="@string/title_activity_main2"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".activies.NoThreadingExampleActivity"
             android:label="@string/title_activity_simple_threading_example"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activies.SimpleThreadingExampleActivity"
             android:label="@string/title_activity_simple_threading_example"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activies.SimpleThreadingViewPostActivity"
             android:label="@string/title_activity_simple_threading_example"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activies.SimpleThreadingExampleRunOnUiActivity"
             android:label="@string/title_activity_simple_threading_example"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activies.AsyncTaskActivity"
             android:label="@string/title_activity_simple_threading_example"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".storage.DataManagementSharedPreference"
             android:label="@string/title_shared_pref_activity"
@@ -75,8 +72,18 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.pstech.tutorials.MainActivity" />
         </activity>
-
-
+        <activity
+            android:name=".activies.ImageFromGalleryActivity"
+            android:label="@string/title_shared_pref_activity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.pstech.tutorials.MainActivity" />
+        </activity>
+        <activity
+            android:name=".listview.ListViewDemoActivity"
+            android:label="@string/title_activity_list_view_demo"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

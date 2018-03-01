@@ -15,5 +15,10 @@
     <string name="play_string">Play</string>
     <string name="highscore_string">&quot;HighScore: &quot;</string>
     <string name="reset_string">Reset</string>
+    <string name="title_activity_list_view_demo">ListViewDemoActivity</string>
+    <string name="title_image_load_gallery">Load Image From Gallery</string>
+    <string name="title_activity_image_from_gallery2">ImageFromGalleryActivity2</string>
+    <string name="type_text_to_search">Type Text To Search</string>
+    <string name="title_list_view_example">List View Example</string>
 
 </resources>

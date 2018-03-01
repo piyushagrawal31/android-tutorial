@@ -4,21 +4,23 @@ import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
-import android.os.AsyncTask;
-import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import com.pstech.tutorials.activies.AsyncTaskActivity;
+import com.pstech.tutorials.activies.ImageFromGalleryActivity;
+import com.pstech.tutorials.listview.ListViewDemoActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button basicIntentBtn;
     private Button intentWithDataBtn;
+    private Button loadImageGalleryBtn;
+    private Button showListViewExampleBtn;
+
     private Button shareBtn;
     private TextView dataTxt;
 
@@ -31,10 +33,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         basicIntentBtn = findViewById(R.id.basic_intent);
         intentWithDataBtn = findViewById(R.id.intent_with_data);
+        loadImageGalleryBtn = findViewById(R.id.image_load_gallery);
+        showListViewExampleBtn = findViewById(R.id.list_view_example);
 
         basicIntentBtn.setOnClickListener(this);
-
         intentWithDataBtn.setOnClickListener(this);
+        loadImageGalleryBtn.setOnClickListener(this);
+        showListViewExampleBtn.setOnClickListener(this);
     }
 
     private void playRingtone() {
@@ -75,6 +80,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else if (view == shareBtn) {
             String data = dataTxt.getText().toString();
             shareApp();
+        } else if (view == loadImageGalleryBtn) {
+            Intent showImageIntent = new Intent(MainActivity.this, ImageFromGalleryActivity.class);
+//            Intent showImageIntent = new Intent(MainActivity.this, AsyncTaskActivity.class);
+            startActivity(showImageIntent);
+        } else if (view == showListViewExampleBtn) {
+            Intent showListViewDemoIntent = new Intent(MainActivity.this, ListViewDemoActivity.class);
+            startActivity(showListViewDemoIntent);
         }
     }
 

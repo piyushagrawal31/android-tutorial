@@ -77,5 +77,19 @@
             android:layout_height="90sp"
             android:text="Another button" />
 
+        <Button
+            android:id="@+id/image_load_gallery"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="90sp"
+            android:text="@string/title_image_load_gallery" />
+
+        <Button
+            android:id="@+id/list_view_example"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="90sp"
+            android:text="@string/title_list_view_example" />
+
     </LinearLayout>
 </LinearLayout>
