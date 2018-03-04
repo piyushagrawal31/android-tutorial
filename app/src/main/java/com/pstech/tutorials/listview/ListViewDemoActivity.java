@@ -26,14 +26,17 @@ public class ListViewDemoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_view_demo);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
         stations = getStations();
         mStationsView = findViewById(R.id.item_list);
+
         ArrayAdapter adapter =
                 new ShowStationItemAdapter(getApplicationContext(), stations);
-        mStationsView.setAdapter(adapter);
 
+        mStationsView.setAdapter(adapter);
     }
 
     public List<Station> getStations() {

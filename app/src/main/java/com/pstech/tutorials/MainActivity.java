@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         intentWithDataBtn.setOnClickListener(this);
         loadImageGalleryBtn.setOnClickListener(this);
         showListViewExampleBtn.setOnClickListener(this);
+
     }
 
     private void playRingtone() {

@@ -19,6 +19,19 @@
     <string name="title_image_load_gallery">Load Image From Gallery</string>
     <string name="title_activity_image_from_gallery2">ImageFromGalleryActivity2</string>
     <string name="type_text_to_search">Type Text To Search</string>
+
     <string name="title_list_view_example">List View Example</string>
+    <string name="fix_string">Fix Options</string>
+
+    <string-array name="Titles">
+        <item>The Tragedy of Hamlet, Prince of Denmark</item>
+        <item>King Lear</item>
+        <item>Julius Caesar</item>
+    </string-array>
+    <string-array name="Quotes">
+        <item>Now cracks a noble heart. Good-night, sweet prince; And flights of angels sing thee to thy rest.</item>
+        <item>As flies to wanton boys, are we to the gods; they kill us for their sport.</item>
+        <item>There is a tide in the affairs of men, which taken at the flood, leads on to fortune. Omitted, all the voyage of their life is bound in shallows and in miseries.</item>
+    </string-array>
 
 </resources>

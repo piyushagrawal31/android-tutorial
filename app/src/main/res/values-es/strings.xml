@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Cheque NFC</string>
+    <string name="banner_ad_unit_id">ca-app-pub-4403433540523787/3055147910</string>
+    <string name="nfcDisplayDefault">Estado de disponibilidad NFC</string>
+    <string name="check_nfc_available">Verifica si NFC está disponible</string>
+    <string name="nfc_not_supported">Lo siento, su dispositivo no es compatible con NFC.</string>
+    <string name="enabled">habilitado.</string>
+    <string name="disabled">discapacitado.</string>
+    <string name="nfc_status">Este dispositivo admite NFC y NFC es </string>
+    <string name="know_more_nfc">Conozca NFC (solo inglés)</string>
+    <string name="change_nfc_setting">Cambiar la configuración de NFC</string>
+
+    <string name="action_settings">Configuraciones</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="send_to">Enviar a ...</string>
+    <string name="emailId">care.pstechnology@gmail.com</string>
+    <string name="title_feedback">Realimentación</string>
+    <string name="share">Compartir</string>
+    <string name="rate_comment">Califica y comenta</string>
+
+</resources>
