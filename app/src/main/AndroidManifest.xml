@@ -84,7 +84,24 @@
             android:name=".listview.ListViewDemoActivity"
             android:label="@string/title_activity_list_view_demo"
             android:theme="@style/AppTheme.NoActionBar" />
-
+        <activity
+            android:name=".fragments.dialogfragment.activies.DateTimeDisplayActivity"
+            android:label="@string/title_activity_date_time_display"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.pstech.tutorials.MainActivity" />
+        </activity>
+        <activity
+            android:name=".fragments.dialogfragment.activies.MainActivityAddFilter"
+            android:label="@string/title_activity_main_add_filter"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.pstech.tutorials.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

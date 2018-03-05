@@ -8,4 +8,20 @@
 
     <dimen name="material_text_body2">13.0sp</dimen>
     <dimen name="material_text_title">20.0sp</dimen>
+
+    <dimen name="padding_15_15_20_25">15.0dip</dimen>
+    <dimen name="padding_10_10_15_20">10.0dip</dimen>
+    <dimen name="space_5_5_5_10">5.0dip</dimen>
+    <dimen name="space_15_15_20_25">15.0dip</dimen>
+    <dimen name="window">19.0sp</dimen>
+    <dimen name="text">13.0sp</dimen>
+    <dimen name="editTextMinHeight">25.0dip</dimen>
+    <dimen name="editTextPaddingBottom">5.0dip</dimen>
+    <dimen name="editTextPaddingLeft">5.0dip</dimen>
+    <dimen name="editTextPaddingRight">5.0dip</dimen>
+    <dimen name="editTextPaddingTop">5.0dip</dimen>
+    <dimen name="space_10_10_10_15">10.0dip</dimen>
+    <dimen name="margin_5_5_10_10">5.0dip</dimen>
+    <dimen name="padding_5_5_10_10">5.0dip</dimen>
+
 </resources>

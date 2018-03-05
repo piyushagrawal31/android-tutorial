@@ -34,4 +34,27 @@
         <item>There is a tide in the affairs of men, which taken at the flood, leads on to fortune. Omitted, all the voyage of their life is bound in shallows and in miseries.</item>
     </string-array>
 
+    <string name="title_activity_date_time_display">DateTimeDisplayActivity</string>
+    <string name="btn_show_datepicker">Change Time</string>
+    <string name="btn_show_timepicker">Change Date</string>
+    <string name="title_activity_main_add_filter">MainActivityAddFilter</string>
+
+    <string name="enter_filter_name">Enter a filter name</string>
+    <string name="enter_name">Enter a name</string>
+    <string name="enter_summary">Enter a summary</string>
+    <string name="enter_url">Enter a url</string>
+    <string name="dialog_feed_summary">Summary</string>
+    <string name="dialog_feed_url">URL</string>
+    <string name="dialog_feed_name">Name</string>
+    <string name="button_ok">OK</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="dialog_feed_title">New Feed</string>
+    <string name="dialog_filter_title">New Filter</string>
+    <string name="dialog_filter_name">Filter Name</string>
+    <string name="dialog_filter_value">Filter Text</string>
+    <string name="dialog_filter_value_tip">Text to be filtered</string>
+    <string name="subtitle">Subtitle</string>
+    <string name="isInclude">Include Filter</string>
+    <string name="isGlobal">Global Filter</string>
+
 </resources>
