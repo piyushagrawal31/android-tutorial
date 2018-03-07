@@ -16,7 +16,6 @@ import com.pstech.tutorials.R;
 public class TitlesListActivity extends ListActivity {
     public static String[] mTitleArray;
     public static String[] mQuoteArray;
-
     public static final String INDEX = "index";
 
     @Override
@@ -28,6 +27,7 @@ public class TitlesListActivity extends ListActivity {
 
         ArrayAdapter adapter = new ArrayAdapter<String>(TitlesListActivity.this,
                 R.layout.list_text_item_layout, TitlesListActivity.mTitleArray);
+
         setListAdapter(adapter);
     }
 

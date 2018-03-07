@@ -34,6 +34,12 @@
         <item>There is a tide in the affairs of men, which taken at the flood, leads on to fortune. Omitted, all the voyage of their life is bound in shallows and in miseries.</item>
     </string-array>
 
+    <string-array name="menu">
+        <item>Delete</item>
+        <item>Exclude</item>
+        <item>Mark Favorite</item>
+    </string-array>
+
     <string name="title_activity_date_time_display">DateTimeDisplayActivity</string>
     <string name="btn_show_datepicker">Change Time</string>
     <string name="btn_show_timepicker">Change Date</string>
@@ -56,5 +62,8 @@
     <string name="subtitle">Subtitle</string>
     <string name="isInclude">Include Filter</string>
     <string name="isGlobal">Global Filter</string>
+    <string name="title_activity_menu_example">MenuExampleActivity</string>
+    <string name="help">Help</string>
+    <string name="title_app_demo_menu">Demoing Menu Option and On click List</string>
 
 </resources>

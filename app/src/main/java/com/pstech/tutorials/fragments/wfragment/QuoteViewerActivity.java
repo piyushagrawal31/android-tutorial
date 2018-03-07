@@ -18,6 +18,7 @@ public class QuoteViewerActivity extends AppCompatActivity implements TitlesFrag
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         mTitleArray = getResources().getStringArray(R.array.Titles);
         mQuoteArray = getResources().getStringArray(R.array.Quotes);
 
@@ -25,7 +26,6 @@ public class QuoteViewerActivity extends AppCompatActivity implements TitlesFrag
 
         mDetailsFragment = (QuotesFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.details);
-
     }
 
     @Override
@@ -34,5 +34,4 @@ public class QuoteViewerActivity extends AppCompatActivity implements TitlesFrag
             mDetailsFragment.showQuoteAtIndex(index);
         }
     }
-
 }

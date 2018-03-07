@@ -11,7 +11,8 @@ import android.view.View;
 import com.pstech.tutorials.R;
 import com.pstech.tutorials.fragments.dialogfragment.fragments.AddFilterDialog;
 
-public class MainActivityAddFilter extends AppCompatActivity implements AddFilterDialog.AddFilterInterface {
+public class MainActivityAddFilter extends AppCompatActivity
+        implements AddFilterDialog.AddFilterInterface {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +34,6 @@ public class MainActivityAddFilter extends AppCompatActivity implements AddFilte
 
     @Override
     public void onDialogFilterPositiveClick(DialogFragment dialog) {
-
+        
     }
 }

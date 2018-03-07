@@ -31,6 +31,7 @@ public class TitlesFragment extends ListFragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+
         getListView().setChoiceMode(ListView.CHOICE_MODE_SINGLE);
 
         setListAdapter(new ArrayAdapter<String>(getActivity(),

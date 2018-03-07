@@ -20,6 +20,7 @@ public class DateTimeDisplayActivity extends AppCompatActivity implements
     private TextView currTimeText;
     private TextView currDateText;
     private Button btnTimePicker;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +35,6 @@ public class DateTimeDisplayActivity extends AppCompatActivity implements
         btnTimePicker = findViewById(R.id.btn_time);
         btnTimePicker.setOnClickListener(this);
     }
-
 
     @Override
     public void onDateSet(DatePicker datePicker, int i, int i1, int i2) {
@@ -53,8 +53,10 @@ public class DateTimeDisplayActivity extends AppCompatActivity implements
     @Override
     public void onClick(View view) {
         if (view == btnTimePicker) {
+
             TimePickerFragment fragment = TimePickerFragment.newInstance();
             fragment.show(getSupportFragmentManager(), "Choose Time");
+
         } else {
 
         }

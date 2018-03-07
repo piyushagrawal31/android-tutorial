@@ -102,6 +102,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.pstech.tutorials.MainActivity" />
         </activity>
+        <activity
+            android:name=".menuoptions.MenuExampleActivity"
+            android:label="@string/title_activity_menu_example"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.pstech.tutorials.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
