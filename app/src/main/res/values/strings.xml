@@ -65,5 +65,8 @@
     <string name="title_activity_menu_example">MenuExampleActivity</string>
     <string name="help">Help</string>
     <string name="title_app_demo_menu">Demoing Menu Option and On click List</string>
+    <string name="generate_log_message_string">Generate Log Message</string>
+    <string name="stop_service_string">Stop Music Service</string>
+    <string name="start_service_string">Start Music Service</string>
 
 </resources>
