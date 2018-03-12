@@ -68,5 +68,7 @@
     <string name="generate_log_message_string">Generate Log Message</string>
     <string name="stop_service_string">Stop Music Service</string>
     <string name="start_service_string">Start Music Service</string>
+    <string name="title_send_broadcast">Send Broadcast</string>
+    <string name="send_feedback">Send Feedback</string>
 
 </resources>

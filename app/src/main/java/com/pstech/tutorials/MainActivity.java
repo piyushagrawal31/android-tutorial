@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.pstech.tutorials.activies.AsyncTaskActivity;
 import com.pstech.tutorials.activies.ImageFromGalleryActivity;
+import com.pstech.tutorials.broadcast.SimpleBroadcast;
 import com.pstech.tutorials.listview.ListViewDemoActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button intentWithDataBtn;
     private Button loadImageGalleryBtn;
     private Button showListViewExampleBtn;
+    private Button sendBcastBtn;
 
     private Button shareBtn;
     private TextView dataTxt;
@@ -35,12 +37,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         intentWithDataBtn = findViewById(R.id.intent_with_data);
         loadImageGalleryBtn = findViewById(R.id.image_load_gallery);
         showListViewExampleBtn = findViewById(R.id.list_view_example);
+        sendBcastBtn = findViewById(R.id.send_broadcast);
 
         basicIntentBtn.setOnClickListener(this);
         intentWithDataBtn.setOnClickListener(this);
         loadImageGalleryBtn.setOnClickListener(this);
         showListViewExampleBtn.setOnClickListener(this);
-
+        sendBcastBtn.setOnClickListener(this);
     }
 
     private void playRingtone() {
@@ -88,6 +91,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else if (view == showListViewExampleBtn) {
             Intent showListViewDemoIntent = new Intent(MainActivity.this, ListViewDemoActivity.class);
             startActivity(showListViewDemoIntent);
+        } else if (view == sendBcastBtn) {
+            Intent sendBcastIntent = new Intent(MainActivity.this, SimpleBroadcast.class);
+            startActivity(sendBcastIntent);
         }
     }
 

@@ -91,5 +91,13 @@
             android:layout_height="90sp"
             android:text="@string/title_list_view_example" />
 
+        <Button
+            android:id="@+id/send_broadcast"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="90sp"
+            android:text="@string/title_send_broadcast" />
+
+
     </LinearLayout>
 </LinearLayout>

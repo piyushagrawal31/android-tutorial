@@ -1,5 +1,7 @@
 package com.pstech.tutorials.menuoptions;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -52,6 +54,9 @@ public class MenuExampleActivity extends AppCompatActivity implements AdapterVie
             case R.id.help:
                 Toast.makeText(getApplicationContext(), "You pressed help", Toast.LENGTH_SHORT).show();
                 break;
+            case R.id.send_feedback:
+                sendFeedback();
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -96,5 +101,17 @@ public class MenuExampleActivity extends AppCompatActivity implements AdapterVie
                 break;
         }
         return true;
+    }
+
+    public void sendFeedback() {
+        String emailId = getResources().getString(R.string.emailId);
+        Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
+                "mailto", emailId, null));
+        String[] addresses = {emailId};
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Subject" + getPackageName());
+        emailIntent.putExtra(Intent.EXTRA_TEXT, "Body");
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, addresses); // String[] addresses
+
+        startActivity(Intent.createChooser(emailIntent, "Send email..."));
     }
 }
