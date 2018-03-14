@@ -1,21 +1,18 @@
 package com.pstech.tutorials.location;
 
-import android.content.pm.PackageManager;
-import android.os.Build;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -41,7 +38,7 @@ import butterknife.ButterKnife;
  * Created by pagrawal on 14-03-2018.
  */
 
-public class GetLocationDrawMarkerActivity extends AppCompatActivity implements OnMapReadyCallback {
+public class GetLocationDrawRouteActivity extends AppCompatActivity implements OnMapReadyCallback {
     public static final int LOCATION_UPDATE_MIN_DISTANCE = 10;
     public static final int LOCATION_UPDATE_MIN_TIME = 5000;
 
@@ -79,7 +76,25 @@ public class GetLocationDrawMarkerActivity extends AppCompatActivity implements 
 
         mLocationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         initMap();
-        getCurrentLocation();
+        AppUtils.drawRoute(createDummyRoute(), mGoogleMap);
+    }
+
+    private List<Station> createDummyRoute() {
+        List<Station> stations = new ArrayList<>();
+        Station.Builder builder = new Station.Builder();
+        builder.setId(1).setLineType(LineType.RED.toString()).setLattitude(17.4986732)
+        .setLongitude(78.3866581);
+        stations.add(builder.build("JNTU"));
+
+        builder.setId(2).setLineType(LineType.RED.toString()).setLattitude(17.4937607)
+        .setLongitude(78.3997035);
+        stations.add(builder.build("KPHB"));
+
+        builder.setId(3).setLineType(LineType.RED.toString()).setLattitude(17.4852508)
+                .setLongitude(78.4093863);
+        stations.add(builder.build("Kukatpally"));
+
+        return stations;
     }
 
     private void initLocationListener() {

@@ -113,16 +113,19 @@ public class Station implements Parcelable {
         private double distanceFareFromBase;
         private boolean smartBikeAvailable;
 
-        public void setLongitude(double longitude) {
+        public Builder setLongitude(double longitude) {
             this.longitude = longitude;
+            return this;
         }
 
-        public void setLattitude(double lattitude) {
+        public Builder setLattitude(double lattitude) {
             this.lattitude = lattitude;
+            return this;
         }
 
-        public void setLineType(String lineType) {
+        public Builder setLineType(String lineType) {
             this.lineType = LineType.getLineType(lineType);
+            return this;
         }
 
         public void setMmts(boolean mmts) {

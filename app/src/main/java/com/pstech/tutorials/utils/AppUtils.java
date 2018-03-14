@@ -2,16 +2,17 @@ package com.pstech.tutorials.utils;
 
 import android.graphics.Color;
 
-//import com.google.android.gms.maps.CameraUpdateFactory;
-//import com.google.android.gms.maps.GoogleMap;
-//import com.google.android.gms.maps.model.JointType;
-//import com.google.android.gms.maps.model.LatLng;
-//import com.google.android.gms.maps.model.MarkerOptions;
-//import com.google.android.gms.maps.model.Polyline;
-//import com.google.android.gms.maps.model.PolylineOptions;
-//import com.google.android.gms.maps.model.RoundCap;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.model.JointType;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.Polyline;
+import com.google.android.gms.maps.model.PolylineOptions;
+import com.google.android.gms.maps.model.RoundCap;
 
 import com.pstech.tutorials.models.LineType;
+import com.pstech.tutorials.models.Station;
 
 import java.util.List;
 
@@ -69,47 +70,42 @@ public class AppUtils {
         }
     }
 
-//    public static boolean drawRoute(List<Station> route, GoogleMap mMap) {
-//        boolean pointsAdded = false;
-//        PolylineOptions rectOptions = new PolylineOptions();
-//
-//        LatLng baseLoc = null;
-//        LatLng currLoc = null;
-//
-//        for (Station stationItem : route) {
-//            double lattitude = stationItem.getLattitude();
-//            double longitude = stationItem.getLongitude();
-//            if (longitude == AppConstants.DEFAULT_DOUBLE) {
-//                break;
-//            }
-//
-//            if (baseLoc == null)
-//                baseLoc = new LatLng(lattitude, longitude);
-//
-//            currLoc = new LatLng(lattitude, longitude);
-//            mMap.addMarker(new MarkerOptions().position(currLoc).title(stationItem.getShortCode()));
-//            rectOptions.add(currLoc);
-//            pointsAdded = true;
-//        }
-//
-//        Polyline polyline;
-//        if (pointsAdded) {
-//            polyline = mMap.addPolyline(rectOptions);
-//            stylePolyline(polyline);
-////            polyline.setStartCap(startCap);
-////            polyline.setEndCap(new RoundCap());
-////            polyline.setJointType(JointType.ROUND);
-//        }
-//        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(baseLoc, 10.0f));
-//        return true;
-//    }
+    public static boolean drawRoute(List<Station> route, GoogleMap mMap) {
+        boolean pointsAdded = false;
+        PolylineOptions rectOptions = new PolylineOptions();
 
-//    private static void stylePolyline(Polyline polyline) {
-////        polyline.setStartCap(startCap);
-//        polyline.setEndCap(new RoundCap());
-//        polyline.setWidth(AppConstants.INITIAL_STROKE_WIDTH_PX);
-////        polyline.setColor(COLOR_BLACK_ARGB);
-//        polyline.setJointType(JointType.ROUND);
-//    }
+        LatLng baseLoc = null;
+        LatLng currLoc = null;
+
+        for (Station stationItem : route) {
+            double lattitude = stationItem.getLattitude();
+            double longitude = stationItem.getLongitude();
+            if (longitude == 0.0) {
+                break;
+            }
+
+            if (baseLoc == null)
+                baseLoc = new LatLng(lattitude, longitude);
+
+            currLoc = new LatLng(lattitude, longitude);
+            mMap.addMarker(new MarkerOptions().position(currLoc).title(stationItem.getShortCode()));
+            rectOptions.add(currLoc);
+            pointsAdded = true;
+        }
+
+        Polyline polyline;
+        if (pointsAdded) {
+            polyline = mMap.addPolyline(rectOptions);
+            stylePolyline(polyline);
+        }
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(baseLoc, 10.0f));
+        return true;
+    }
+
+    private static void stylePolyline(Polyline polyline) {
+        polyline.setEndCap(new RoundCap());
+        polyline.setWidth(8);
+        polyline.setJointType(JointType.ROUND);
+    }
 
 }
