@@ -70,5 +70,6 @@
     <string name="start_service_string">Start Music Service</string>
     <string name="title_send_broadcast">Send Broadcast</string>
     <string name="send_feedback">Send Feedback</string>
+    <string name="error_location_provider">Error in Getting location Provider</string>
 
 </resources>

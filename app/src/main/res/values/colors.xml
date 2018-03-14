@@ -26,6 +26,6 @@
     <color name="yellow_mid">#ff9a9a41</color>
     <color name="edittext_border_focused">@color/yellow_dark</color>
     <color name="edittext_border_pressed">@color/yellow_dark</color>
-
+    <color name="red">#FFFF0000</color>
 
 </resources>
