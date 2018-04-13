@@ -12,7 +12,9 @@ import android.widget.TextView;
 
 import com.pstech.tutorials.activies.AsyncTaskActivity;
 import com.pstech.tutorials.activies.ImageFromGalleryActivity;
+import com.pstech.tutorials.activies.ImageWithZoom;
 import com.pstech.tutorials.broadcast.SimpleBroadcast;
+import com.pstech.tutorials.firebase.SignInActivity;
 import com.pstech.tutorials.listview.ListViewDemoActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -20,8 +22,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button basicIntentBtn;
     private Button intentWithDataBtn;
     private Button loadImageGalleryBtn;
+    private Button loadImageZoomGalleryBtn;
     private Button showListViewExampleBtn;
     private Button sendBcastBtn;
+    private Button firebaseAuthBtn;
 
     private Button shareBtn;
     private TextView dataTxt;
@@ -38,12 +42,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         loadImageGalleryBtn = findViewById(R.id.image_load_gallery);
         showListViewExampleBtn = findViewById(R.id.list_view_example);
         sendBcastBtn = findViewById(R.id.send_broadcast);
+        firebaseAuthBtn = findViewById(R.id.firebase_auth);
+        loadImageZoomGalleryBtn = findViewById(R.id.image_zoom_load_gallery);
 
         basicIntentBtn.setOnClickListener(this);
         intentWithDataBtn.setOnClickListener(this);
         loadImageGalleryBtn.setOnClickListener(this);
         showListViewExampleBtn.setOnClickListener(this);
         sendBcastBtn.setOnClickListener(this);
+        firebaseAuthBtn.setOnClickListener(this);
+        loadImageZoomGalleryBtn.setOnClickListener(this);
     }
 
     private void playRingtone() {
@@ -86,7 +94,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             shareApp();
         } else if (view == loadImageGalleryBtn) {
             Intent showImageIntent = new Intent(MainActivity.this, ImageFromGalleryActivity.class);
-//            Intent showImageIntent = new Intent(MainActivity.this, AsyncTaskActivity.class);
             startActivity(showImageIntent);
         } else if (view == showListViewExampleBtn) {
             Intent showListViewDemoIntent = new Intent(MainActivity.this, ListViewDemoActivity.class);
@@ -94,6 +101,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else if (view == sendBcastBtn) {
             Intent sendBcastIntent = new Intent(MainActivity.this, SimpleBroadcast.class);
             startActivity(sendBcastIntent);
+        } else if (view == firebaseAuthBtn) {
+            Intent signInIntent = new Intent(MainActivity.this, SignInActivity.class);
+            startActivity(signInIntent);
+        } else if (view == loadImageZoomGalleryBtn) {
+            Intent showImageIntent = new Intent(MainActivity.this, ImageWithZoom.class);
+            startActivity(showImageIntent);
         }
     }
 

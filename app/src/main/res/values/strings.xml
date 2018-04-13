@@ -17,6 +17,7 @@
     <string name="reset_string">Reset</string>
     <string name="title_activity_list_view_demo">ListViewDemoActivity</string>
     <string name="title_image_load_gallery">Load Image From Gallery</string>
+    <string name="title_image_zoom_load_gallery">Load Zoom Image From Gallery</string>
     <string name="title_activity_image_from_gallery2">ImageFromGalleryActivity2</string>
     <string name="type_text_to_search">Type Text To Search</string>
 
@@ -71,5 +72,20 @@
     <string name="title_send_broadcast">Send Broadcast</string>
     <string name="send_feedback">Send Feedback</string>
     <string name="error_location_provider">Error in Getting location Provider</string>
+    <string name="title_activity_payment_pay_u">PaymentPayUActivity</string>
 
+    <!-- firebase starts -->
+    <string name="menu_login">Log in</string>
+    <string name="menu_logout">Log out</string>
+    <string name="heading_recent">Recent</string>
+    <string name="heading_my_posts">My Posts</string>
+    <string name="heading_my_top_posts">My Top Posts</string>
+    <string name="hint_email">email</string>
+    <string name="hint_password">password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="skip_sign">Skip Sign</string>
+    <string name="title_firebase_auth">Firebase Authentication</string>
+
+    <!-- firebase ends -->
 </resources>

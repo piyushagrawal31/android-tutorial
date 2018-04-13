@@ -38,8 +38,9 @@ public class ReceiverActivity extends AppCompatActivity {
     private LocalBroadcastManager mBroadcastMgr;
     // Dynamic registration Ends
 
-//    IntentFilter wifiIntentFilter = new IntentFilter();
-//    wifiIntentFilter.addAction(WifiManager.SUPPLICANT_CONNECTION_CHANGE_ACTION);
+    IntentFilter wifiIntentFilter = new IntentFilter(WifiManager.SUPPLICANT_CONNECTION_CHANGE_ACTION);
+
+    // wifiIntentFilter.addAction(WifiManager.SUPPLICANT_CONNECTION_CHANGE_ACTION);
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
@@ -53,6 +54,6 @@ public class ReceiverActivity extends AppCompatActivity {
 
         mBroadcastMgr.registerReceiver(receiver, intentFilter);
 //         Dynamic registration Ends
-//        registerReceiver(receiver, wifiIntentFilter);
+        registerReceiver(receiver, wifiIntentFilter);
     }
 }
